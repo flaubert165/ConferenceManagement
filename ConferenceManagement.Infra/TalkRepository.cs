@@ -24,6 +24,7 @@ namespace ConferenceManagement.Infra
 
             while(!sr.EndOfStream)
             {
+                // Console.WriteLine(sr.ReadLine());
                 yield return talkConverter.ConvertTalk(sr.ReadLine());
             }
         }

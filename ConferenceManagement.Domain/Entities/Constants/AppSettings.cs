@@ -5,6 +5,7 @@ namespace ConferenceManagement.Domain.Entities.Constants
 {
     public static class AppSettings
     {
+        // CORRIGIR CÓDIGO PARA ACESSAR E RESGATAR OS VALORES DE APP.SETTINGS>JSON
         private static IConfiguration Configuration;
 
         public static DateTime MorningSessionStartTime 
@@ -83,7 +84,7 @@ namespace ConferenceManagement.Domain.Entities.Constants
         {
             get
             {
-                return int.Parse(Configuration.GetSection("ConferenceInfo").GetSection("LightningSessionDuration").Value);
+                return int.Parse(Configuration["ConferenceInfo:LightningSessionDuration"]);
             }
         }
 

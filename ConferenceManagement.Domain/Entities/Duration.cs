@@ -20,7 +20,7 @@ namespace ConferenceManagement.Domain.Entities
         public Duration(Lightning lightning)
         {
             Unit = lightning;
-            Value = AppSettings.LightningSessionDuration;
+            Value = 5;//AppSettings.LightningSessionDuration;
         }
 
         public int GetvalueInMinutes()

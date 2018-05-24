@@ -2,7 +2,7 @@ using System;
 
 namespace ConferenceManagement.Domain.Entities
 {
-    public class Talk
+    public class Talk : IComparable
     {
         public string Name { get; private set; }
         public Duration Duration { get; private set; }
