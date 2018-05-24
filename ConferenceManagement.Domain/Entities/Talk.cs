@@ -22,5 +22,37 @@ namespace ConferenceManagement.Domain.Entities
         {
             this.Name = name;
         }
+
+        public int DurationInMinutes()
+        {
+            return Duration.GetvalueInMinutes();
+        }
+
+        public override string ToString()
+        {
+            return string.Concat(Name, "", Duration);
+        }
+
+        public override bool Equals(object obj)
+        {
+            Talk conferenceEvent = obj as Talk;
+            if(conferenceEvent == null)
+            {
+                return false;
+            }
+
+            return Name.Equals(conferenceEvent.Name);
+        }
+
+        public override int GetHashCode()
+        {
+            return new { Name }.GetHashCode();
+        }
+
+        public int CompareTo(object obj)
+        {
+            Talk otherTalk = obj as Talk;
+            return otherTalk.DurationInMinutes() - DurationInMinutes();
+        }
     }
 }

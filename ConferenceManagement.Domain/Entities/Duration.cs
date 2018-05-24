@@ -1,5 +1,7 @@
 using System;
 using Microsoft.Extensions.Configuration;
+using ConferenceManagement.Domain.Entities;
+using ConferenceManagement.Domain.Entities.Constants;
 
 namespace ConferenceManagement.Domain.Entities
 {
@@ -17,9 +19,8 @@ namespace ConferenceManagement.Domain.Entities
 
         public Duration(Lightning lightning)
         {
-            //var teste = this._configuration.GetSection("ConferenceInfo").GetSection("LightningSessionDuration").Value;
             Unit = lightning;
-            Value = 5;
+            Value = AppSettings.LightningSessionDuration;
         }
 
         public int GetvalueInMinutes()

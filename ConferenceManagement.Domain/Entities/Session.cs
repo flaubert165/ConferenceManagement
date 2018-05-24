@@ -1,11 +1,70 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ConferenceManagement.Domain.Entities
 {
-    public class Session
+    public class Session: IEnumerable<ScheduledTalk>
     {
         private DateTime sessionStartTime;
         private DateTime sessionEndTime;
         private DateTime lastTalkEndsTime;
+
+        private IList<ScheduledTalk> sessionEvents;
+
+        public Session(DateTime start, DateTime end)
+        {
+            sessionStartTime = start;
+            sessionEndTime = end;
+            lastTalkEndsTime = start;
+            sessionEvents = new List<ScheduledTalk>();
+        }
+
+        public TimeSpan GetSessionDuration()
+        {
+            return sessionEndTime.Subtract(sessionStartTime);
+        }
+
+        public TimeSpan TimeLeft()
+        {
+            return sessionEndTime.Subtract(lastTalkEndsTime);
+        }
+
+        public bool EndsBefore(DateTime time)
+        {
+            return lastTalkEndsTime <= time;
+        }
+
+        public IEnumerable<ScheduledTalk> EnumerateEvents()
+        {
+            return sessionEvents;
+        }
+
+        public bool CanAcceptEvent(Talk talk)
+        {
+            return TimeLeft().TotalMinutes >= talk.DurationInMinutes();
+        }
+
+        public void AcceptEvent(Talk talk)
+        {
+            if(CanAcceptEvent(talk))
+            {
+                sessionEvents.Add(new ScheduledTalk(talk, lastTalkEndsTime));
+                lastTalkEndsTime = lastTalkEndsTime.AddMinutes(talk.DurationInMinutes());
+                return;
+            }
+
+            throw new InvalidOperationException("Strings.ErrorNotEnoughTimeInSession");
+        }
+
+        public IEnumerator<ScheduledTalk> GetEnumerator()
+        {
+            return sessionEvents.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }

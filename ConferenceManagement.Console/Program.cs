@@ -21,7 +21,6 @@ namespace ConferenceManagement.Console
             var builder = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("app.settings.json", optional: true, reloadOnChange: true);
-
             Configuration = builder.Build();
 
             var serviceProvider = new ServiceCollection()
@@ -32,9 +31,8 @@ namespace ConferenceManagement.Console
             
             // services
             var _talkService = serviceProvider.GetService<ITalkService>();
-
-            string rootPath = Directory.GetCurrentDirectory();    
-            string fileName = @"/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Console/InputData/TestInput.txt";
+   
+            string fileName = Directory.GetCurrentDirectory() + "/InputData/TestInput.txt";
             
             // verify if has entries
             if (args.Length > 0)
@@ -46,7 +44,7 @@ namespace ConferenceManagement.Console
             {
                 // return IEnumerable of Talks
                 var reader = _talkService.GetTalksFromTextFile(fileName);
-                    
+
             }
             catch (System.Exception ex)
             {

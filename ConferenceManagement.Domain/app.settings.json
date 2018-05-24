@@ -7,7 +7,7 @@
         "AfternoonSessionEndTime": "17:00:00 PM",
         "LunchIntervalStartTime": "12:00:00 PM",
         "LunchIntervalEndTime": "13:00:00 PM",
-        "NetworkSessionRangeStartTime": "16:00:00 PM",
-        "NetworkSessionRangeEndTime": "17:00:00 PM"
+        "NetworkingSessionRangeStartTime": "16:00:00 PM",
+        "NetworkingSessionRangeEndTime": "17:00:00 PM"
     }
 }
