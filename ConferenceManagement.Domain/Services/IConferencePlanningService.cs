@@ -3,7 +3,7 @@ using ConferenceManagement.Domain.Entities;
 
 namespace ConferenceManagement.Domain.Services
 {
-    public interface IConferencePlanning
+    public interface IConferencePlanningService
     {
         #region  FirstFit Approach
          Conference GreedyBestFitApproach(IEnumerable<Talk> talks);

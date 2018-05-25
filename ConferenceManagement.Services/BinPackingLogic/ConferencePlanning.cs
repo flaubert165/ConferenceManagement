@@ -7,7 +7,7 @@ using ConferenceManagement.Domain.Services;
 
 namespace ConferenceManagement.Services.BinPackingLogic
 {
-    public class ConferencePlanning : IConferencePlanning
+    public class ConferencePlanningService : IConferencePlanningService
     {
         #region BESTFIT APPROACH IMPLEMENTATION
 

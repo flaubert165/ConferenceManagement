@@ -19,16 +19,20 @@ namespace ConferenceManagement.Console
     {
         static void Main(string[] args)
         {
+            // dependency injection service
             var serviceProvider = new ServiceCollection()
             .AddSingleton<ITalkService, TalkService>()
             .AddSingleton<ITalkRepository, TalkRepository>()
-            .AddSingleton<IConferencePlanning, ConferencePlanning>()
+            .AddSingleton<IConferencePlanningService, ConferencePlanningService>()
+            .AddSingleton<IPrintService, PrintService>()
             .BuildServiceProvider();
 
             // services
             var _talkService = serviceProvider.GetService<ITalkService>();
-            var _planningService = serviceProvider.GetService<IConferencePlanning>();
+            var _planningService = serviceProvider.GetService<IConferencePlanningService>();
+            var _printService = serviceProvider.GetService<IPrintService>();
    
+            // get input file
             string fileName = Directory.GetCurrentDirectory() + "/InputData/TestInput.txt";
             
             // verify if has entries
@@ -39,11 +43,10 @@ namespace ConferenceManagement.Console
 
             try
             {
-                // return IEnumerable of Talks
                 var reader = _talkService.GetTalksFromTextFile(fileName);
                 Conference conference = _planningService.GreedyBestFitApproach(reader);
+                _printService.PrintResult(conference);
 
-                ReadConference(conference);
             }
             catch (System.Exception ex)
             {
@@ -52,22 +55,6 @@ namespace ConferenceManagement.Console
             
             System.Console.WriteLine("Finished! Press any key to exit! Thanks =)");
             System.Console.Read();
-        }
-
-        static void ReadConference(Conference conference)
-        {
-            System.Console.WriteLine();
-            foreach (BaseTrack conferenceItem in conference)
-            {
-                System.Console.WriteLine(conferenceItem);
-
-                foreach(ScheduledTalk conferenceTalk in conferenceItem)
-                {
-                    System.Console.WriteLine(conferenceTalk);
-                }
-
-                System.Console.WriteLine();
-            }
         }
     }
 }
