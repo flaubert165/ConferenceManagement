@@ -1,6 +1,6 @@
 namespace ConferenceManagement.Domain.Entities.Factories
 {
-    public class ITrackTwoSessionsFactory: ITrackFactory
+    public class TrackTwoSessionsFactory: ITrackFactory
     {
         public BaseTrack CreateTrack(string trackName)
         {

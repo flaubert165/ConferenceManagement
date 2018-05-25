@@ -54,7 +54,7 @@ namespace ConferenceManagement.Domain.Entities
                 return;
             }
 
-            throw new InvalidOperationException("Strings.ErrorNotEnoughTimeInSession");
+            throw new InvalidOperationException("ErrorNotEnoughTimeInSession");
         }
 
         public IEnumerator<ScheduledTalk> GetEnumerator()

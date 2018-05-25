@@ -1,12 +1,23 @@
 using System;
+using System.IO;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.FileExtensions;
+using Microsoft.Extensions.Configuration.Json;
 
 namespace ConferenceManagement.Domain.Entities.Constants
 {
     public static class AppSettings
     {
-        // CORRIGIR CÓDIGO PARA ACESSAR E RESGATAR OS VALORES DE APP.SETTINGS>JSON
-        private static IConfiguration Configuration;
+        public static IConfiguration Configuration
+        {
+            get
+            {
+                var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("app.settings.json", optional: true, reloadOnChange: true);
+                return builder.Build();
+            }
+        }
 
         public static DateTime MorningSessionStartTime 
         {
@@ -72,19 +83,11 @@ namespace ConferenceManagement.Domain.Entities.Constants
             }
         }
 
-        public static int MinutesInLightning
-        {
-            get
-            {
-                return int.Parse(Configuration.GetSection("ConferenceInfo").GetSection("MinutesInLightning").Value);
-            }
-        }
-
         public static int LightningSessionDuration
         {
             get
             {
-                return int.Parse(Configuration["ConferenceInfo:LightningSessionDuration"]);
+                return int.Parse(Configuration.GetSection("ConferenceInfo").GetSection("LightningSessionDuration").Value);
             }
         }
 

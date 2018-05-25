@@ -30,7 +30,7 @@ namespace ConferenceManagement.Domain.Entities
 
         public override string ToString()
         {
-            return string.Concat(Name, "", Duration);
+            return string.Concat(Name, " ", Duration);
         }
 
         public override bool Equals(object obj)

@@ -32,10 +32,8 @@ namespace ConferenceManagement.Domain.Entities
 
         private string ProvideNextTrackName()
         {
-            return string.Format("Strings.TrackNameTemplate", tracks.Count + 1);
+            return string.Format("Track {0}", tracks.Count + 1);
         }
-
-        #region IEnumerable<T> members
 
         public IEnumerator<BaseTrack> GetEnumerator()
         {
@@ -46,7 +44,5 @@ namespace ConferenceManagement.Domain.Entities
         {
             return GetEnumerator();
         }
-
-        #endregion
     }
 }

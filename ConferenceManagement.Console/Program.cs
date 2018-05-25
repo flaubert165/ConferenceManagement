@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using ConferenceManagement.Domain.Repositories;
@@ -16,28 +17,19 @@ namespace ConferenceManagement.Console
 {
     class Program
     {
-        public static IConfiguration Configuration { get; set; }
-        
         static void Main(string[] args)
         {
-            var builder = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("app.settings.json", optional: true, reloadOnChange: true);
-            Configuration = builder.Build();
-
             var serviceProvider = new ServiceCollection()
             .AddSingleton<ITalkService, TalkService>()
             .AddSingleton<ITalkRepository, TalkRepository>()
             .AddSingleton<IConferencePlanning, ConferencePlanning>()
-            .AddSingleton<IConfiguration>(Configuration)
             .BuildServiceProvider();
-            
+
             // services
             var _talkService = serviceProvider.GetService<ITalkService>();
             var _planningService = serviceProvider.GetService<IConferencePlanning>();
    
             string fileName = Directory.GetCurrentDirectory() + "/InputData/TestInput.txt";
-            
             
             // verify if has entries
             if (args.Length > 0)
@@ -50,20 +42,32 @@ namespace ConferenceManagement.Console
                 // return IEnumerable of Talks
                 var reader = _talkService.GetTalksFromTextFile(fileName);
                 Conference conference = _planningService.GreedyBestFitApproach(reader);
-                
-                foreach (var item in reader)
-                {
-                    System.Console.WriteLine(item.Name);
-                }
 
+                ReadConference(conference);
             }
             catch (System.Exception ex)
             {
                 System.Console.WriteLine(ex.Message);
             }
             
-            System.Console.WriteLine("Press \"Enter\" to exit");
-            System.Console.ReadLine();
+            System.Console.WriteLine("Finished! Press any key to exit! Thanks =)");
+            System.Console.Read();
+        }
+
+        static void ReadConference(Conference conference)
+        {
+            System.Console.WriteLine();
+            foreach (BaseTrack conferenceItem in conference)
+            {
+                System.Console.WriteLine(conferenceItem);
+
+                foreach(ScheduledTalk conferenceTalk in conferenceItem)
+                {
+                    System.Console.WriteLine(conferenceTalk);
+                }
+
+                System.Console.WriteLine();
+            }
         }
     }
 }

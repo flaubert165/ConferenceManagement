@@ -10,7 +10,7 @@ namespace ConferenceManagement.Domain.Entities
         {
             if(start != AppSettings.LunchIntervalStartTime)
             {
-                throw new ArgumentOutOfRangeException("Strings.ErrorLunchStartTime");
+                throw new ArgumentOutOfRangeException("ErrorLunchStartTime");
             }
         }
     }

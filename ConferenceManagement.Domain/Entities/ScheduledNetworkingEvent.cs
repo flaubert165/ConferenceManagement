@@ -10,7 +10,7 @@ namespace ConferenceManagement.Domain.Entities
         {
             if (AppSettings.NetworkingSessionRangeStartTime > start || AppSettings.NetworkingSessionRangeEndTime < start)
             {
-                throw new ArgumentOutOfRangeException("Strings.ErrorNetworkEventStart");
+                throw new ArgumentOutOfRangeException("ErrorNetworkEventStart");
             }
         }
     }

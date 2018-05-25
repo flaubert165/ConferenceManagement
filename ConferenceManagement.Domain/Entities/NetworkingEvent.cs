@@ -3,7 +3,7 @@ namespace ConferenceManagement.Domain.Entities
     public class NetworkingEvent : Talk
     {
         public NetworkingEvent()
-            : base("Strings.NetworkingEvent", new EmptyOrNullDuration())
+            : base("Networking Event", new EmptyOrNullDuration())
         {
 
         }

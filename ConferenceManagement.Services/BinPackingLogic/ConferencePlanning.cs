@@ -14,7 +14,8 @@ namespace ConferenceManagement.Services.BinPackingLogic
         public Conference GreedyBestFitApproach(IEnumerable<Talk> talks)
         {
             talks = Sort(talks);
-            Conference conference = new Conference(new ITrackTwoSessionsFactory());
+            
+            Conference conference = new Conference(new TrackTwoSessionsFactory());
 
             foreach(Talk talk in talks)
             {
@@ -28,7 +29,7 @@ namespace ConferenceManagement.Services.BinPackingLogic
 
                 if(bestSession == null)
                 {
-                    throw new ArgumentException(string.Format("Strings.ErrorUnscheduledEvent", talk));
+                    throw new ArgumentException(string.Format("ErrorUnscheduledEvent", talk));
                 }
 
                 bestSession.AcceptEvent(talk);

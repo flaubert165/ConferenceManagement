@@ -13,7 +13,7 @@ namespace ConferenceManagement.Domain.Entities
         }
         public override int ToMinutes(int amount)
         {
-            return amount * 5;//AppSettings.LightningSessionDuration;
+            return amount * AppSettings.LightningSessionDuration;
         }
 
         public override string ToString(int amount)
