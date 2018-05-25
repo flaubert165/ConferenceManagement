@@ -11,11 +11,11 @@ namespace ConferenceManagement.Infra
 {
     public class TalkRepository : ITalkRepository
     {
-        private ITalkConverter talkConverter;
+        private ITalkConverterService talkConverterService;
 
         public TalkRepository()
         {
-            talkConverter = new TextTalkConverter();
+            talkConverterService = new TextTalkConverter();
         }
 
         public IEnumerable<Talk> GetTalksFromTextFile(string fileName)
@@ -24,7 +24,7 @@ namespace ConferenceManagement.Infra
 
             while(!sr.EndOfStream)
             {
-                yield return talkConverter.ConvertTalk(sr.ReadLine());
+                yield return talkConverterService.ConvertTalk(sr.ReadLine());
             }
         }
     }

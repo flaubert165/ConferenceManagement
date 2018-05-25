@@ -8,7 +8,7 @@ using ConferenceManagement.Domain.Services;
 
 namespace ConferenceManagement.Infra.Input
 {
-    public class TextTalkConverter : ITalkConverter
+    public class TextTalkConverter : ITalkConverterService
     {
         private LineConverter[] lineConverters;
 

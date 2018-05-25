@@ -2,7 +2,7 @@ using ConferenceManagement.Domain.Entities;
 
 namespace ConferenceManagement.Domain.Services
 {
-    public interface ITalkConverter
+    public interface ITalkConverterService
     {
         Talk ConvertTalk(string obj);
     }
