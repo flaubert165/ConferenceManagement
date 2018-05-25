@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration.FileExtensions;
 using Microsoft.Extensions.Configuration.Json;
 using ConferenceManagement.Domain.Entities;
 using ConferenceManagement.Services.BinPackingLogic;
+using ConferenceManagement.Common.Validations;
 
 namespace ConferenceManagement.Console
 {
@@ -19,33 +20,34 @@ namespace ConferenceManagement.Console
     {
         static void Main(string[] args)
         {
-            // dependency injection service
-            var serviceProvider = new ServiceCollection()
-            .AddSingleton<ITalkService, TalkService>()
-            .AddSingleton<ITalkRepository, TalkRepository>()
-            .AddSingleton<IConferencePlanningService, ConferencePlanningService>()
-            .AddSingleton<IPrintService, PrintService>()
-            .BuildServiceProvider();
-
-            // services
-            var _talkService = serviceProvider.GetService<ITalkService>();
-            var _planningService = serviceProvider.GetService<IConferencePlanningService>();
-            var _printService = serviceProvider.GetService<IPrintService>();
-   
-            // get input file
-            string fileName = Directory.GetCurrentDirectory() + "/InputData/TestInput.txt";
+            string file = Directory.GetCurrentDirectory() + "/InputData/TestInput.txt";
             
-            // verify if has entries
-            if (args.Length > 0)
-            {
-                fileName = args[0];
-            }
+            Guard.ForNullOrEmptyDefaultMessage(file, "The data file");
 
             try
             {
-                var reader = _talkService.GetTalksFromTextFile(fileName);
-                Conference conference = _planningService.GreedyBestFitApproach(reader);
-                _printService.PrintResult(conference);
+                
+                /**
+                    The talks variable represents an Enumerable<Talks>.
+                 */
+                var talks = Startup.ServiceProvider
+                                    .GetService<ITalkService>()
+                                    .GetTalksFromTextFile(file);
+
+                /**
+                    The conference variable representes an Conference object instance.    
+                */                                                        
+                var conference = Startup
+                                    .ServiceProvider
+                                    .GetService<IConferencePlanningService>()
+                                    .GreedyBestFitApproach(talks);
+
+                /**
+                    The PrintService prints the result of the process.
+                 */
+                Startup.ServiceProvider
+                                    .GetService<IPrintService>()
+                                    .PrintResult(conference);
 
             }
             catch (System.Exception ex)

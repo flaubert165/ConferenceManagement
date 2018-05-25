@@ -13,7 +13,7 @@ namespace ConferenceManagement.Services.BinPackingLogic
 
         public Conference GreedyBestFitApproach(IEnumerable<Talk> talks)
         {
-            talks = Sort(talks);
+            talks = talks.OrderBy(talk => talk);
             
             Conference conference = new Conference(new TrackTwoSessionsFactory());
 
@@ -34,10 +34,9 @@ namespace ConferenceManagement.Services.BinPackingLogic
 
                 bestSession.AcceptEvent(talk);
             }
-
             return conference;
         }
-        
+
         public Session GetBestSessionBestFitApproach(IEnumerable<Session> sessions, Talk talk)
         {
             Session bestFitSession = null;
@@ -55,7 +54,6 @@ namespace ConferenceManagement.Services.BinPackingLogic
 
             return bestFitSession;
         }
-
         #endregion
 
         #region OTHER APPROACHS IMPLEMENTATIONS
@@ -70,11 +68,7 @@ namespace ConferenceManagement.Services.BinPackingLogic
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<Talk> Sort(IEnumerable<Talk> talks)
-        {
-            return talks.OrderBy(talk => talk);
-        }
-
         #endregion
+
     }
 }

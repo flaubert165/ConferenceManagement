@@ -7,7 +7,7 @@ namespace ConferenceManagement.Common.Validations
         public static void ForNullOrEmptyDefaultMessage(string value, string propName)
         {
             if (String.IsNullOrEmpty(value))
-                throw new Exception(propName + " é obrigatório!");
+                throw new Exception(propName + " is required!");
         }
 
         public static void ForNullOrEmpty(string value, string errorMessage)

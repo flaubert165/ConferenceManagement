@@ -16,7 +16,5 @@ namespace ConferenceManagement.Domain.Services
          Session GetBestSessionFirstFitApproach(IEnumerable<Session> sessions, Talk talk);
 
          #endregion
-
-         IEnumerable<Talk> Sort(IEnumerable<Talk> talks);
     }
 }
