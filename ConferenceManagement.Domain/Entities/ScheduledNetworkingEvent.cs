@@ -1,5 +1,6 @@
 using System;
 using ConferenceManagement.Domain.Entities.Constants;
+using ConferenceManagement.Common.Resources;
 
 namespace ConferenceManagement.Domain.Entities
 {
@@ -10,7 +11,7 @@ namespace ConferenceManagement.Domain.Entities
         {
             if (AppSettings.NetworkingSessionRangeStartTime > start || AppSettings.NetworkingSessionRangeEndTime < start)
             {
-                throw new ArgumentOutOfRangeException("ErrorNetworkEventStart");
+                throw new ArgumentOutOfRangeException(Messages.NetworkingEventRangeTimeError);
             }
         }
     }

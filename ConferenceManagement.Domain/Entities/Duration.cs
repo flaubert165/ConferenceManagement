@@ -1,8 +1,3 @@
-using System;
-using Microsoft.Extensions.Configuration;
-using ConferenceManagement.Domain.Entities;
-using ConferenceManagement.Domain.Entities.Constants;
-
 namespace ConferenceManagement.Domain.Entities
 {
     public class Duration

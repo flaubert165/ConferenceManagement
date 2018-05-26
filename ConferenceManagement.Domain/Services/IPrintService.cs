@@ -4,6 +4,8 @@ namespace ConferenceManagement.Domain.Services
 {
     public interface IPrintService
     {
-         void PrintResult(Conference conference);
+        void PrintInitialMessage();
+        void PrintResult(Conference conference);
+        void PrintEndMessage();
     }
 }

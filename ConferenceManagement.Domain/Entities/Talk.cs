@@ -9,18 +9,8 @@ namespace ConferenceManagement.Domain.Entities
 
         public Talk(string name, Duration duration)
         {
-            SetName(name);
-            SetDuration(duration);
-        }
-
-        private void SetDuration(Duration duration)
-        {
-            this.Duration = duration;
-        }
-
-        private void SetName(string name)
-        {
             this.Name = name;
+            this.Duration = duration;
         }
 
         public int DurationInMinutes()
@@ -36,6 +26,7 @@ namespace ConferenceManagement.Domain.Entities
         public override bool Equals(object obj)
         {
             Talk conferenceEvent = obj as Talk;
+
             if(conferenceEvent == null)
             {
                 return false;
@@ -52,6 +43,7 @@ namespace ConferenceManagement.Domain.Entities
         public int CompareTo(object obj)
         {
             Talk otherTalk = obj as Talk;
+
             return otherTalk.DurationInMinutes() - DurationInMinutes();
         }
     }

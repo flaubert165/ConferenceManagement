@@ -1,0 +1,13 @@
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/bin/Debug/netcoreapp2.0/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/bin/Debug/netcoreapp2.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/bin/Debug/netcoreapp2.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Infra.Tests.deps.json
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Infra.Tests.runtimeconfig.json
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Infra.Tests.runtimeconfig.dev.json
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Infra.Tests.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Infra.Tests.pdb
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/obj/Debug/netcoreapp2.0/ConferenceManagement.Infra.Tests.csproj.CoreCompileInputs.cache
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/obj/Debug/netcoreapp2.0/ConferenceManagement.Infra.Tests.AssemblyInfoInputs.cache
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/obj/Debug/netcoreapp2.0/ConferenceManagement.Infra.Tests.AssemblyInfo.cs
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/obj/Debug/netcoreapp2.0/ConferenceManagement.Infra.Tests.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Infra.Tests/obj/Debug/netcoreapp2.0/ConferenceManagement.Infra.Tests.pdb

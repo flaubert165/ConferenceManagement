@@ -1,16 +1,10 @@
-using System;
+using ConferenceManagement.Common.Resources;
 using ConferenceManagement.Domain.Entities.Constants;
-using Microsoft.Extensions.Configuration;
 
 namespace ConferenceManagement.Domain.Entities
 {
     public class Lightning: TimeUnitManager
     {
-
-        public Lightning()
-        {
-            
-        }
         public override int ToMinutes(int amount)
         {
             return amount * AppSettings.LightningSessionDuration;
@@ -18,7 +12,7 @@ namespace ConferenceManagement.Domain.Entities
 
         public override string ToString(int amount)
         {
-            return "lightning";    
+            return Messages.Lightning;    
         }
     }
 }

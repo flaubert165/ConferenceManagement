@@ -187,13 +187,13 @@
       "projectName": "ConferenceManagement.Common",
       "projectPath": "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/ConferenceManagement.Common.csproj",
       "packagesPath": "/Users/italosantana/.nuget/packages/",
-      "outputPath": "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/",
+      "outputPath": "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/italosantana/.nuget/NuGet/NuGet.Config"
+        "/Users/italosantana/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -218,7 +218,7 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.1, )",
+            "version": "2.0.1",
             "autoReferenced": true
           }
         },

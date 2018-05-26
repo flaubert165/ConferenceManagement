@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FileNotFound" xml:space="preserve">
+   <value>The input data file not found. Please, input a valid data file and rerun program.</value>
+  </data>
+  <data name="FileContentNullOrEmpty" xml:space="preserve">
+   <value>The input data file don't has registers. Please input a valid data file.</value>
+  </data>  
+  <data name="LunchStartRangeTimeError" xml:space="preserve">
+    <value>Lunch must starts at 12:00:00 PM</value>
+  </data>
+  <data name="NetworkingEventRangeTimeError" xml:space="preserve">
+    <value>Networking Event must starts between 04:00:00 and 05:00:00 PM</value>
+  </data>
+   <data name="TrackNameFormat" xml:space="preserve">
+    <value>Track {0}{1}</value>
+  </data>
+  <data name="MinutesNameFormat" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="Lightning" xml:space="preserve">
+    <value>lightning</value>
+  </data>
+  <data name="Lunch" xml:space="preserve">
+    <value>Lunch</value>
+  </data>
+  <data name="NetworkingEvent" xml:space="preserve">
+    <value>Networking Event</value>
+  </data>  
+</root>

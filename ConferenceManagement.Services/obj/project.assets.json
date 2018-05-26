@@ -174,10 +174,21 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "ConferenceManagement.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ConferenceManagement.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConferenceManagement.Common.dll": {}
+        }
+      },
       "ConferenceManagement.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ConferenceManagement.Common": "1.0.0",
           "Microsoft.Extensions.Configuration": "2.1.0-rc1-final",
           "Microsoft.Extensions.Configuration.FileExtensions": "2.1.0-rc1-final",
           "Microsoft.Extensions.Configuration.Json": "2.1.0-rc1-final"
@@ -585,6 +596,11 @@
         "version.txt"
       ]
     },
+    "ConferenceManagement.Common/1.0.0": {
+      "type": "project",
+      "path": "../ConferenceManagement.Common/ConferenceManagement.Common.csproj",
+      "msbuildProject": "../ConferenceManagement.Common/ConferenceManagement.Common.csproj"
+    },
     "ConferenceManagement.Domain/1.0.0": {
       "type": "project",
       "path": "../ConferenceManagement.Domain/ConferenceManagement.Domain.csproj",
@@ -608,13 +624,13 @@
       "projectName": "ConferenceManagement.Services",
       "projectPath": "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/ConferenceManagement.Services.csproj",
       "packagesPath": "/Users/italosantana/.nuget/packages/",
-      "outputPath": "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/obj/",
+      "outputPath": "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/italosantana/.nuget/NuGet/NuGet.Config"
+        "/Users/italosantana/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -643,7 +659,7 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.1, )",
+            "version": "2.0.1",
             "autoReferenced": true
           }
         },

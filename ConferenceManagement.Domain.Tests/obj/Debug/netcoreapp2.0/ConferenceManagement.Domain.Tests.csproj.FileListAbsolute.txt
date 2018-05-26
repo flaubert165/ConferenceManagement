@@ -1,0 +1,17 @@
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Domain.Tests.deps.json
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Domain.Tests.runtimeconfig.json
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Domain.Tests.runtimeconfig.dev.json
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Domain.Tests.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Domain.Tests.pdb
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Common.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Domain.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Domain.pdb
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/bin/Debug/netcoreapp2.0/ConferenceManagement.Common.pdb
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/obj/Debug/netcoreapp2.0/ConferenceManagement.Domain.Tests.csproj.CoreCompileInputs.cache
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/obj/Debug/netcoreapp2.0/ConferenceManagement.Domain.Tests.AssemblyInfoInputs.cache
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/obj/Debug/netcoreapp2.0/ConferenceManagement.Domain.Tests.AssemblyInfo.cs
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/obj/Debug/netcoreapp2.0/ConferenceManagement.Domain.Tests.dll
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain.Tests/obj/Debug/netcoreapp2.0/ConferenceManagement.Domain.Tests.pdb

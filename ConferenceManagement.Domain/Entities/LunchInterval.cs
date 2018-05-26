@@ -1,4 +1,5 @@
 using System;
+using ConferenceManagement.Common.Resources;
 using ConferenceManagement.Domain.Entities.Constants;
 
 namespace ConferenceManagement.Domain.Entities
@@ -10,7 +11,7 @@ namespace ConferenceManagement.Domain.Entities
         {
             if(start != AppSettings.LunchIntervalStartTime)
             {
-                throw new ArgumentOutOfRangeException("ErrorLunchStartTime");
+                throw new ArgumentOutOfRangeException(Messages.LunchStartRangeTimeError);
             }
         }
     }

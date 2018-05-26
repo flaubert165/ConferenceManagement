@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ConferenceManagement.Common.Resources;
 using ConferenceManagement.Domain.Entities.Factories;
 
 namespace ConferenceManagement.Domain.Entities
@@ -32,7 +33,7 @@ namespace ConferenceManagement.Domain.Entities
 
         private string ProvideNextTrackName()
         {
-            return string.Format("Track {0}", tracks.Count + 1);
+            return string.Format(Messages.TrackNameFormat, tracks.Count + 1,  ":");
         }
 
         public IEnumerator<BaseTrack> GetEnumerator()

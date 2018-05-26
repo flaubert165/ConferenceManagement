@@ -23,7 +23,6 @@ namespace ConferenceManagement.Domain.Entities
             return allSessions;
         }
 
-        // Implementation for the GetEnumerator method.
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();

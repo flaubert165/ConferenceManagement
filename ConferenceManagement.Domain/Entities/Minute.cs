@@ -1,3 +1,5 @@
+using ConferenceManagement.Common.Resources;
+
 namespace ConferenceManagement.Domain.Entities
 {
     public class Minute : TimeUnitManager
@@ -9,7 +11,7 @@ namespace ConferenceManagement.Domain.Entities
 
         public override string ToString(int amount)
         {
-            return string.Concat(amount, "min");
+            return string.Concat(amount, Messages.MinutesNameFormat);
         }
     }
 }

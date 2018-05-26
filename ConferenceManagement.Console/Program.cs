@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using ConferenceManagement.Domain.Repositories;
+﻿using System.IO;
 using ConferenceManagement.Domain.Services;
-using ConferenceManagement.Infra;
-using ConferenceManagement.Services;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration.FileExtensions;
-using Microsoft.Extensions.Configuration.Json;
-using ConferenceManagement.Domain.Entities;
-using ConferenceManagement.Services.BinPackingLogic;
 using ConferenceManagement.Common.Validations;
+using ConferenceManagement.Common.Resources;
+using System;
 
 namespace ConferenceManagement.Console
 {
@@ -21,42 +12,33 @@ namespace ConferenceManagement.Console
         static void Main(string[] args)
         {
             string file = Directory.GetCurrentDirectory() + "/InputData/TestInput.txt";
-            
-            Guard.ForNullOrEmptyDefaultMessage(file, "The data file");
+
+            Guard.ForNullOrEmpty(file, Messages.FileNotFound);
 
             try
             {
-                
-                /**
-                    The talks variable represents an Enumerable<Talks>.
-                 */
+                Startup.ServiceProvider.GetService<IPrintService>().PrintInitialMessage();
+
                 var talks = Startup.ServiceProvider
                                     .GetService<ITalkService>()
                                     .GetTalksFromTextFile(file);
 
-                /**
-                    The conference variable representes an Conference object instance.    
-                */                                                        
+                Guard.IEnumerableIsNullOrEmpty(talks);
+
                 var conference = Startup
                                     .ServiceProvider
                                     .GetService<IConferencePlanningService>()
                                     .GreedyBestFitApproach(talks);
 
-                /**
-                    The PrintService prints the result of the process.
-                 */
-                Startup.ServiceProvider
-                                    .GetService<IPrintService>()
-                                    .PrintResult(conference);
 
+                Startup.ServiceProvider.GetService<IPrintService>().PrintResult(conference);
+
+                Startup.ServiceProvider.GetService<IPrintService>().PrintEndMessage();
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 System.Console.WriteLine(ex.Message);
             }
-            
-            System.Console.WriteLine("Finished! Press any key to exit! Thanks =)");
-            System.Console.Read();
         }
     }
 }

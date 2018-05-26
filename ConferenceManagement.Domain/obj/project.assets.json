@@ -173,6 +173,16 @@
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
+      },
+      "ConferenceManagement.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ConferenceManagement.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConferenceManagement.Common.dll": {}
+        }
       }
     }
   },
@@ -569,10 +579,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ConferenceManagement.Common/1.0.0": {
+      "type": "project",
+      "path": "../ConferenceManagement.Common/ConferenceManagement.Common.csproj",
+      "msbuildProject": "../ConferenceManagement.Common/ConferenceManagement.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "ConferenceManagement.Common >= 1.0.0",
       "Microsoft.Extensions.Configuration >= 2.1.0-rc1-final",
       "Microsoft.Extensions.Configuration.FileExtensions >= 2.1.0-rc1-final",
       "Microsoft.Extensions.Configuration.Json >= 2.1.0-rc1-final",
@@ -590,13 +606,13 @@
       "projectName": "ConferenceManagement.Domain",
       "projectPath": "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain/ConferenceManagement.Domain.csproj",
       "packagesPath": "/Users/italosantana/.nuget/packages/",
-      "outputPath": "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain/obj/",
+      "outputPath": "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/italosantana/.nuget/NuGet/NuGet.Config"
+        "/Users/italosantana/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -606,7 +622,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/ConferenceManagement.Common.csproj": {
+              "projectPath": "/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/ConferenceManagement.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -618,23 +638,23 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
-          "Microsoft.Extensions.Configuration": {
-            "target": "Package",
-            "version": "[2.1.0-rc1-final, )"
-          },
-          "Microsoft.Extensions.Configuration.FileExtensions": {
-            "target": "Package",
-            "version": "[2.1.0-rc1-final, )"
-          },
-          "Microsoft.Extensions.Configuration.Json": {
-            "target": "Package",
-            "version": "[2.1.0-rc1-final, )"
-          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.1, )",
+            "version": "2.0.1",
             "autoReferenced": true
+          },
+          "Microsoft.Extensions.Configuration": {
+            "target": "Package",
+            "version": "2.1.0-rc1-final"
+          },
+          "Microsoft.Extensions.Configuration.Json": {
+            "target": "Package",
+            "version": "2.1.0-rc1-final"
+          },
+          "Microsoft.Extensions.Configuration.FileExtensions": {
+            "target": "Package",
+            "version": "2.1.0-rc1-final"
           }
         },
         "imports": [

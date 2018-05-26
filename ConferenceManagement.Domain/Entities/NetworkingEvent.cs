@@ -1,9 +1,11 @@
+using ConferenceManagement.Common.Resources;
+
 namespace ConferenceManagement.Domain.Entities
 {
     public class NetworkingEvent : Talk
     {
         public NetworkingEvent()
-            : base("Networking Event", new EmptyOrNullDuration())
+            : base(Messages.NetworkingEvent, new EmptyOrNullDuration())
         {
 
         }

@@ -7,4 +7,10 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.0-rc1-final" />
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.1.0-rc1-final" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConferenceManagement.Common\ConferenceManagement.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\TextDataFileConverters\" />
+  </ItemGroup>
 </Project>

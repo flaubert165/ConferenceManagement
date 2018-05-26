@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using ConferenceManagement.Common.Resources;
 
 namespace ConferenceManagement.Common.Validations
 {
-    public class Guard
+    public static class Guard
     {
         public static void ForNullOrEmptyDefaultMessage(string value, string propName)
         {
@@ -58,6 +61,12 @@ namespace ConferenceManagement.Common.Validations
         {
             if (a != b)
                 throw new Exception(errorMessage);
+        }
+
+        public static void IEnumerableIsNullOrEmpty<T>(this IEnumerable<T> list)
+        {
+            if (list == null || !list.Any())
+                throw new Exception(Messages.FileContentNullOrEmpty);
         }
 
     }

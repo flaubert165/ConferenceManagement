@@ -1,17 +1,35 @@
 ﻿<Properties StartupConfiguration="{54DC6969-5A08-4595-AC7B-C3C84FED146B}|Default">
+  <MonoDevelop.Ide.ItemProperties.ConferenceManagement.Application PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="ConferenceManagement" expanded="True">
-            <Node name="ConferenceManagement.Domain.Tests" selected="True" />
+            <Node name="ConferenceManagement.Common.Tests" expanded="True">
+              <Node name="ConferenceManagement" expanded="True">
+                <Node name="Common" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="ConferenceManagement.Domain.Tests" expanded="True">
+              <Node name="ConferenceManagement" expanded="True">
+                <Node name="Domain" expanded="True">
+                  <Node name="Tests" expanded="True">
+                    <Node name="Entities" expanded="True">
+                      <Node name="ConferenceTests" expanded="True">
+                        <Node name="TestCreateNewTrack" selected="True" />
+                      </Node>
+                      <Node name="TalkTests" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.ConferenceManagement.Console PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
