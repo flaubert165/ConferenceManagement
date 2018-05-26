@@ -1,11 +1,10 @@
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/bin/Debug/netstandard2.0/ConferenceManagement.Common.deps.json
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/bin/Debug/netstandard2.0/ConferenceManagement.Common.dll
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/bin/Debug/netstandard2.0/ConferenceManagement.Common.pdb
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/Debug/netstandard2.0/ConferenceManagement.Common.Resources.Messages.resources
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/Debug/netstandard2.0/ConferenceManagement.Common.csproj.GenerateResource.cache
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/Debug/netstandard2.0/ConferenceManagement.Common.csproj.CoreCompileInputs.cache
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/Debug/netstandard2.0/ConferenceManagement.Common.AssemblyInfoInputs.cache
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/Debug/netstandard2.0/ConferenceManagement.Common.AssemblyInfo.cs
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/Debug/netstandard2.0/ConferenceManagement.Common.dll
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/Debug/netstandard2.0/ConferenceManagement.Common.pdb
-/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/Debug/netstandard2.0/ConferenceManagement.Common.Resources.Messages.resources
-/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/Debug/netstandard2.0/ConferenceManagement.Common.csproj.GenerateResource.cache
-/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Common/obj/Debug/netstandard2.0/ConferenceManagement.Common.csprojResolveAssemblyReference.cache

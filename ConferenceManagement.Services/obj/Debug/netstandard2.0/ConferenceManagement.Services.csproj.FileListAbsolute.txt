@@ -1,13 +1,13 @@
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/bin/Debug/netstandard2.0/ConferenceManagement.Services.deps.json
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/bin/Debug/netstandard2.0/ConferenceManagement.Services.dll
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/bin/Debug/netstandard2.0/ConferenceManagement.Services.pdb
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/bin/Debug/netstandard2.0/ConferenceManagement.Common.dll
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/bin/Debug/netstandard2.0/ConferenceManagement.Domain.dll
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/bin/Debug/netstandard2.0/ConferenceManagement.Domain.pdb
+/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/bin/Debug/netstandard2.0/ConferenceManagement.Common.pdb
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/obj/Debug/netstandard2.0/ConferenceManagement.Services.csprojResolveAssemblyReference.cache
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/obj/Debug/netstandard2.0/ConferenceManagement.Services.csproj.CoreCompileInputs.cache
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/obj/Debug/netstandard2.0/ConferenceManagement.Services.AssemblyInfoInputs.cache
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/obj/Debug/netstandard2.0/ConferenceManagement.Services.AssemblyInfo.cs
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/obj/Debug/netstandard2.0/ConferenceManagement.Services.dll
 /Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/obj/Debug/netstandard2.0/ConferenceManagement.Services.pdb
-/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/bin/Debug/netstandard2.0/ConferenceManagement.Common.dll
-/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Services/bin/Debug/netstandard2.0/ConferenceManagement.Common.pdb

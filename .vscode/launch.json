@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/ConferenceManagement.Console/bin/Debug/netcoreapp2.0/ConferenceManagement.Console.dll",
+            "program": "${workspaceFolder}/ConferenceManagement.Application/bin/Debug/netcoreapp2.0/ConferenceManagement.Application.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/ConferenceManagement.Console",
+            "cwd": "${workspaceFolder}/ConferenceManagement.Application",
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
             "console": "internalConsole",
             "stopAtEntry": false,
