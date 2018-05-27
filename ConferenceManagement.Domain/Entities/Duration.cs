@@ -17,7 +17,7 @@ namespace ConferenceManagement.Domain.Entities
             Value = 1;
         }
 
-        public int GetvalueInMinutes()
+        public int GetValueInMinutes()
         {
             return Unit.ToMinutes(Value);
         }

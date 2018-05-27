@@ -1,9 +1,9 @@
-﻿using System;
+﻿
 namespace ConferenceManagement.Domain.Tests.Entities
 {
-    public class BaseTrackTests
+    public class TrackerTests
     {
-        public BaseTrackTests()
+        public TrackerTests()
         {
         }
     }

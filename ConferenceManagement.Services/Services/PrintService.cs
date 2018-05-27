@@ -18,7 +18,7 @@ namespace ConferenceManagement.Services
         {
             Console.WriteLine();
             
-            foreach (BaseTrack conferenceItem in conference)
+            foreach (Tracker conferenceItem in conference)
             {
                 Console.WriteLine(conferenceItem);
 

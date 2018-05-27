@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace ConferenceManagement.Domain.Entities
 {
-    public abstract class BaseTrack : IEnumerable<ScheduledTalk>
+    public abstract class Tracker : IEnumerable<ScheduledTalk>
     {
         protected string trackName;
         protected IList<Session> allSessions;
 
-        public BaseTrack(string name)
+        public Tracker(string name)
         {
             trackName = name;
         }

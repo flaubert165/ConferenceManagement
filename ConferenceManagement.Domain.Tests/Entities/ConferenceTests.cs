@@ -9,14 +9,14 @@ namespace ConferenceManagement.Domain.Tests.Entities
     public class ConferenceTests
     {
         [TestMethod]
-        public void TestCreateNewTrack()
+        public void CreateNewTrack_Test()
         {
             var factoryMock = new Mock<ITrackFactory>();
-            BaseTrack track = new TrackTwoSessions("Track 1");
 
-            factoryMock.Setup(factory => factory.CreateTrack("Track 1")).Returns(track);
+            Tracker track = new TrackTwoSessions("TestTracker");
+            factoryMock.Setup(factory => factory.CreateTrack("TestTracker")).Returns(track);
+
             Conference conference = new Conference(factoryMock.Object);
-
             conference.CreateNewTrack();
 
             factoryMock.VerifyAll();

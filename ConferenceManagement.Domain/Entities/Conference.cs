@@ -1,17 +1,18 @@
+using System.Collections;
 using System.Collections.Generic;
 using ConferenceManagement.Common.Resources;
 using ConferenceManagement.Domain.Entities.Factories;
 
 namespace ConferenceManagement.Domain.Entities
 {
-    public class Conference: IEnumerable<BaseTrack>
+    public class Conference: IEnumerable<Tracker>
     {
         private ITrackFactory trackFactory;
-        private IList<BaseTrack> tracks;
+        private IList<Tracker> tracks;
 
         public Conference(ITrackFactory factory)
         {
-            tracks = new List<BaseTrack>();
+            tracks = new List<Tracker>();
             trackFactory = factory;
         }
 
@@ -22,7 +23,7 @@ namespace ConferenceManagement.Domain.Entities
 
         public IEnumerable<Session> EnumerateSessions()
         {
-            foreach (BaseTrack track in tracks)
+            foreach (Tracker track in tracks)
             {
                 foreach (Session session in track.EnumerateSessions())
                 {
@@ -36,12 +37,12 @@ namespace ConferenceManagement.Domain.Entities
             return string.Format(Messages.TrackNameFormat, tracks.Count + 1,  ":");
         }
 
-        public IEnumerator<BaseTrack> GetEnumerator()
+        public IEnumerator<Tracker> GetEnumerator()
         {
             return tracks.GetEnumerator();
         }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }

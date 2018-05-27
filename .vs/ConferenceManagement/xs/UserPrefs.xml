@@ -1,14 +1,30 @@
 ﻿<Properties StartupConfiguration="{9E7948FB-B6FC-4F42-BDD7-DEB596C407B8}|Default">
-  <MonoDevelop.Ide.ItemProperties.ConferenceManagement.Application PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ConferenceManagement.Application/Program.cs">
+  <MonoDevelop.Ide.ItemProperties.ConferenceManagement.Application PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ConferenceManagement.Services.Tests/BinPackingLogic/ConferencePlanningTests.cs">
     <Files>
-      <File FileName="ConferenceManagement.Application/Startup.cs" Line="17" Column="25" />
-      <File FileName="ConferenceManagement.Application/Program.cs" Line="33" Column="58" />
+      <File FileName="ConferenceManagement.Domain.Tests/Entities/ConferenceTests.cs" Line="5" Column="1" />
+      <File FileName="ConferenceManagement.Domain.Tests/Entities/DurationTests.cs" Line="46" Column="41" />
+      <File FileName="ConferenceManagement.Domain.Tests/Entities/LightningTests.cs" Line="19" Column="9" />
+      <File FileName="ConferenceManagement.Services.Tests/BinPackingLogic/ConferencePlanningTests.cs" Line="40" Column="64" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="ConferenceManagement" expanded="True" selected="True" />
+          <Node name="ConferenceManagement" expanded="True">
+            <Node name="ConferenceManagement.Services.Tests" expanded="True">
+              <Node name="ConferenceManagement" expanded="True">
+                <Node name="Services" expanded="True">
+                  <Node name="Tests" expanded="True">
+                    <Node name="BinPackingLogic" expanded="True">
+                      <Node name="ConferencePlanningTests" expanded="True">
+                        <Node name="CheckIfLunchesAreScheduled_Test" selected="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

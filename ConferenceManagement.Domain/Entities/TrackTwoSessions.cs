@@ -3,7 +3,7 @@ using ConferenceManagement.Domain.Entities.Constants;
 
 namespace ConferenceManagement.Domain.Entities
 {
-    public class TrackTwoSessions: BaseTrack
+    public class TrackTwoSessions: Tracker
     {
         public TrackTwoSessions(string name)
             : base(name)

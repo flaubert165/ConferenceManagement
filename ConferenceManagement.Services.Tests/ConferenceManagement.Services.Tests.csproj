@@ -18,5 +18,11 @@
   <ItemGroup>
     <Folder Include="BinPackingLogic\" />
     <Folder Include="Services\" />
+    <Folder Include="InputData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConferenceManagement.Domain\ConferenceManagement.Domain.csproj" />
+    <ProjectReference Include="..\ConferenceManagement.Infra\ConferenceManagement.Infra.csproj" />
+    <ProjectReference Include="..\ConferenceManagement.Services\ConferenceManagement.Services.csproj" />
   </ItemGroup>
 </Project>

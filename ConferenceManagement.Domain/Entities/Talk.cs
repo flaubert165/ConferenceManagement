@@ -15,7 +15,7 @@ namespace ConferenceManagement.Domain.Entities
 
         public int DurationInMinutes()
         {
-            return Duration.GetvalueInMinutes();
+            return Duration.GetValueInMinutes();
         }
 
         public override string ToString()
