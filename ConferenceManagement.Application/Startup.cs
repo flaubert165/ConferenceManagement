@@ -16,7 +16,7 @@ namespace ConferenceManagement.Console
                 var serviceProvider = new ServiceCollection()
                         .AddSingleton<ITalkService, TalkService>()
                         .AddSingleton<ITalkRepository, TalkRepository>()
-                        .AddSingleton<IConferencePlanningService, ConferencePlanningService>()
+                        .AddSingleton<IConferencePlannerService, ConferencePlannerService>()
                         .AddSingleton<IPrintService, PrintService>()
                         .BuildServiceProvider();
 

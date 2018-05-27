@@ -13,7 +13,7 @@ namespace ConferenceManagement.Console
         {
             string file = Directory.GetCurrentDirectory() + "/InputData/TestInput.txt";
 
-            Guard.ForNullOrEmpty(file, Messages.FileNotFound);
+            Guard.ForNullOrEmpty(file);
 
             try
             {
@@ -27,7 +27,7 @@ namespace ConferenceManagement.Console
 
                 var conference = Startup
                                     .ServiceProvider
-                                    .GetService<IConferencePlanningService>()
+                                    .GetService<IConferencePlannerService>()
                                     .GreedyBestFitApproach(talks);
 
 

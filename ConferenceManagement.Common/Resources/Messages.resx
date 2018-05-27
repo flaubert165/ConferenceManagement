@@ -38,5 +38,11 @@
   </data>
   <data name="NetworkingEvent" xml:space="preserve">
     <value>Networking Event</value>
-  </data>  
+  </data> 
+    <data name="SettingsBasePath" xml:space="preserve">
+    <value>/Users/italosantana/Desktop/ConferenceManagement/ConferenceManagement.Domain/</value>
+  </data>
+  <data name="NotEnoughTimeInSessionError" xml:space="preserve">
+    <value>Not enough remaining time in session</value>
+  </data>
 </root>

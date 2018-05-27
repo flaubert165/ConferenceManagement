@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ConferenceManagement.Common.Resources;
 
 namespace ConferenceManagement.Domain.Entities
 {
@@ -40,21 +41,21 @@ namespace ConferenceManagement.Domain.Entities
             return sessionEvents;
         }
 
-        public bool CanAcceptEvent(Talk talk)
+        public bool CanAcceptTalk(Talk talk)
         {
             return TimeLeft().TotalMinutes >= talk.DurationInMinutes();
         }
 
-        public void AcceptEvent(Talk talk)
+        public void AcceptTalk(Talk talk)
         {
-            if(CanAcceptEvent(talk))
+            if(CanAcceptTalk(talk))
             {
                 sessionEvents.Add(new ScheduledTalk(talk, lastTalkEndsTime));
                 lastTalkEndsTime = lastTalkEndsTime.AddMinutes(talk.DurationInMinutes());
                 return;
             }
 
-            throw new InvalidOperationException("ErrorNotEnoughTimeInSession");
+            throw new InvalidOperationException(Messages.NotEnoughTimeInSessionError);
         }
 
         public IEnumerator<ScheduledTalk> GetEnumerator()

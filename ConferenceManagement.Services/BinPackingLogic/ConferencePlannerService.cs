@@ -7,7 +7,7 @@ using ConferenceManagement.Domain.Services;
 
 namespace ConferenceManagement.Services.BinPackingLogic
 {
-    public class ConferencePlanningService : IConferencePlanningService
+    public class ConferencePlannerService : IConferencePlannerService
     {
         #region BESTFIT APPROACH IMPLEMENTATION
 
@@ -32,7 +32,7 @@ namespace ConferenceManagement.Services.BinPackingLogic
                     throw new ArgumentException(string.Format("ErrorUnscheduledEvent", talk));
                 }
 
-                bestSession.AcceptEvent(talk);
+                bestSession.AcceptTalk(talk);
             }
             return conference;
         }
@@ -43,7 +43,7 @@ namespace ConferenceManagement.Services.BinPackingLogic
 
             foreach(Session session in sessions)
             {
-                if(session.CanAcceptEvent(talk))
+                if(session.CanAcceptTalk(talk))
                 {
                     if (bestFitSession == null || session.TimeLeft() < bestFitSession.TimeLeft())
                     {

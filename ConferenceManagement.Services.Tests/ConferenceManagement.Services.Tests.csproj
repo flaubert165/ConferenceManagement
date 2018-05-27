@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <Compile Remove="UnitTest1.cs" />
+    <Compile Remove="Constants\AppSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BinPackingLogic\" />

@@ -13,4 +13,7 @@
   <ItemGroup>
     <Folder Include="Entities\TextDataFileConverters\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Services\ITalkConverterService.cs" />
+  </ItemGroup>
 </Project>

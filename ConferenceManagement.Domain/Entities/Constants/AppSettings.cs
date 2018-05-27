@@ -1,5 +1,5 @@
 using System;
-using System.IO;
+using ConferenceManagement.Common.Resources;
 using Microsoft.Extensions.Configuration;
 
 namespace ConferenceManagement.Domain.Entities.Constants
@@ -11,7 +11,7 @@ namespace ConferenceManagement.Domain.Entities.Constants
             get
             {
                 var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
+                .SetBasePath(Messages.SettingsBasePath)
                 .AddJsonFile("app.settings.json", optional: true, reloadOnChange: true);
                 return builder.Build();
             }

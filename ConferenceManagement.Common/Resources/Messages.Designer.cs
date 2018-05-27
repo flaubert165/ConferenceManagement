@@ -100,5 +100,17 @@ namespace ConferenceManagement.Common.Resources {
                 return ResourceManager.GetString("NetworkingEvent", resourceCulture);
             }
         }
+        
+        public static string SettingsBasePath {
+            get {
+                return ResourceManager.GetString("SettingsBasePath", resourceCulture);
+            }
+        }
+        
+        public static string NotEnoughTimeInSessionError {
+            get {
+                return ResourceManager.GetString("NotEnoughTimeInSessionError", resourceCulture);
+            }
+        }
     }
 }
