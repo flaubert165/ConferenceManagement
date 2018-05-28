@@ -33,7 +33,7 @@ As I do not have much practice, but I've studied a lot about TDD, I tried to
 implement all my tests before the development process as I preach their own 
 principles, but one hour became unfeasible and I focused on finding an algorithm
 to solve the problem. But I've implemented the test classes for practically 
-all my classes in the domain.
+all my classes in the domain. MS
 
 ## Design Patterns
 
@@ -68,7 +68,7 @@ an example).
 
 ### ConferenceManagement.Common.Tests
 
-Layer responsible for unary testing of the Common modules.
+Layer responsible for unit testing of the Common modules.
 
 ### ConferenceManagement.Domain
 
@@ -104,7 +104,7 @@ just use the IConferencePlannerService interface to do so.
 
 ### ConferenceManagement.Domain.Tests
 
-Layer responsible for unary testing of the Domain modules.
+Layer responsible for unit testing of the Domain modules.
 
 ### ConferenceManagement.Infra
 
@@ -116,7 +116,7 @@ in the ConferenceManagement.Infra layer.
 
 ### ConferenceManagement.Infra.Tests
 
-Layer responsible for unary testing of the Infrastructure modules.
+Layer responsible for unit testing of the Infrastructure modules.
 
 ### ConferenceManagement.Services
 
@@ -129,7 +129,7 @@ ConferencePlannerService.cs class in ConferenceManagement.Services.
 
 ### ConferenceManagement.Services.Tests
 
-Layer responsible for unary testing of the Services modules.
+Layer responsible for unit testing of the Services modules.
 
 # Instructions to run application
 
