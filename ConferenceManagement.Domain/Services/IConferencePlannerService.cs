@@ -5,7 +5,7 @@ namespace ConferenceManagement.Domain.Services
 {
     public interface IConferencePlannerService
     {
-        #region  FirstFit Approach
+        #region  BestFit Approach
          Conference GreedyBestFitApproach(IEnumerable<Talk> talks);
          Session GetBestSessionBestFitApproach(IEnumerable<Session> sessions, Talk talk);
         
